@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_my_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        android:paddingTop="@dimen/space_10"
+        android:paddingBottom="@dimen/space_10">
+
+        <CustomViews.TextViewMedium
+            android:id="@+id/tv_my_order_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_10"
+            android:gravity="start"
+            android:text="Sunday, 12 Jan 2020"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toStartOf="@id/tv_my_order_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CustomViews.PriceView
+            android:id="@+id/tv_my_order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.80"
+            android:textColor="@color/colorOrange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_my_order_date"
+            app:priceFontFamily="regular"
+            app:priceSize="@dimen/text_14"
+            app:priceSize2="@dimen/text_10" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/lable2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_30"
+            android:text="@string/qty"
+            android:textAllCaps="true"
+            android:textColor="@color/colorOrange"
+            app:layout_constraintStart_toEndOf="@id/tv_my_order_price"
+            app:layout_constraintTop_toBottomOf="@id/tv_my_order_date" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_my_order_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_5"
+            android:text="2"
+            android:textColor="@color/colorOrange"
+            app:layout_constraintStart_toEndOf="@id/lable2"
+            app:layout_constraintTop_toBottomOf="@id/tv_my_order_date" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_my_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_10"
+            android:text="@string/delivery"
+            android:textColor="@color/colorGreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/line1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:tint="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        android:background="@color/colorDivider" />
+
+</LinearLayout>

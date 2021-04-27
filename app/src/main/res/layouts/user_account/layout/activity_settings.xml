@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.user_account.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:orientation="vertical"
+        android:padding="@dimen/space_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/space_20">
+
+            <CustomViews.TextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/app_settings"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_20" />
+
+            <CustomViews.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/you_may_manage_settings_of_notifications_and_emails"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorTextHint"
+                android:textSize="@dimen/text_12" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_notification_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewMedium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="@string/general_push_notifications"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18" />
+
+                <Switch
+                    android:id="@+id/sw_setting_notification_general"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:checked="true"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_notification_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewMedium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="@string/push_notification_on_orders"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18" />
+
+                <Switch
+                    android:id="@+id/sw_setting_notification_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:checked="true"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_email_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewMedium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="@string/general_emails"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18" />
+
+                <Switch
+                    android:id="@+id/sw_setting_email_general"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:checked="true"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_email_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewMedium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="@string/emails_on_orders"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18" />
+
+                <Switch
+                    android:id="@+id/sw_setting_email_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:checked="true"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+
+        </LinearLayout>
+
+        <CustomViews.ButtonMedium
+            android:id="@+id/btn_setting_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_view_purple"
+            android:gravity="center"
+            android:text="@string/save_and_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_18"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</ScrollView>

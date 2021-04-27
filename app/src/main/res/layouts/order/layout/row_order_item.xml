@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/space_10"
+    android:paddingEnd="@dimen/space_10"
+    android:paddingBottom="@dimen/space_5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/iv_order_item_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/space_10"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_order_item_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_view_black_transprent"
+            android:gravity="center"
+            android:paddingStart="@dimen/space_5"
+            android:paddingEnd="@dimen/space_5"
+            android:text="10% Discount"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <CustomViews.TextViewMedium
+            android:id="@+id/tv_order_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Den Elder Milk"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_18" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_order_item_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="250 Ml"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorOrange" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_order_item_price_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_10">
+
+        <CustomViews.PriceView
+            android:id="@+id/tv_order_item_price_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.36"
+            android:textColor="@color/colorTextHint"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:priceFontFamily="regular"
+            app:priceSize="@dimen/text_12"
+            app:priceSize2="@dimen/text_8" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorTextHint"
+            android:rotation="-30"
+            app:layout_constraintBottom_toBottomOf="@id/tv_order_item_price_main"
+            app:layout_constraintEnd_toEndOf="@id/tv_order_item_price_main"
+            app:layout_constraintStart_toStartOf="@id/tv_order_item_price_main"
+            app:layout_constraintTop_toTopOf="@id/tv_order_item_price_main" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CustomViews.PriceView
+        android:id="@+id/tv_order_item_price_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_5"
+        android:text="3.02"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_18"
+        app:priceFontFamily="medium"
+        app:priceSize="@dimen/text_18"
+        app:priceSize2="@dimen/text_12" />
+
+    <CustomViews.TextViewMedium
+        android:id="@+id/tv_order_item_qty"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="@dimen/space_10"
+        android:autoSizeMaxTextSize="@dimen/text_16"
+        android:autoSizeMinTextSize="@dimen/text_10"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/xml_view_orange"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/colorWhite"
+        app:allowBG="true"
+        app:cornerRadius="@dimen/space_5" />
+
+</LinearLayout>

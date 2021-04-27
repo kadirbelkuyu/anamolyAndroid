@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomViews.shadow.ShadowView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:cornerRadiusTL="@dimen/space_8"
+    app:cornerRadiusTR="@dimen/space_8">
+
+    <LinearLayout
+        android:id="@+id/ll_register_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/space_30"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingEnd="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        android:paddingBottom="@dimen/space_20">
+
+        <View
+            android:id="@+id/view_dash"
+            android:layout_width="@dimen/space_40"
+            android:layout_height="@dimen/space_3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_marginBottom="@dimen/space_20"
+            android:background="@drawable/xml_rounded_orange" />
+
+        <CustomViews.TextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/thanks_fo_your_registration"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_20" />
+
+        <CustomViews.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/you_can_in_the_queue_wait_until_administrator_confirm_your_registration"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextHint"
+            android:textSize="@dimen/text_12" />
+
+        <CustomViews.TextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:gravity="start"
+            android:text="@string/waiting_list_no"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_20" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_waiting_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="1032"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorOrange"
+            android:textSize="22sp" />
+
+        <CustomViews.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/we_will_send_you_a_message_as_soon_as_you_can_order"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextHint"
+            android:textSize="@dimen/text_12" />
+
+        <CustomViews.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_15"
+            android:drawableStart="@drawable/ic_email"
+            android:drawableTint="@color/colorBlack"
+            android:gravity="start|center_vertical"
+            android:text="@string/contact_us_if_need_help"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_18" />
+
+        <LinearLayout
+            android:id="@+id/ll_register_success_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CustomViews.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/close"
+                android:textColor="@color/colorTextHint" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/close"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</CustomViews.shadow.ShadowView>

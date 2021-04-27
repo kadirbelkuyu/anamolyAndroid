@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomViews.shadow.ShadowView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:cornerRadiusTL="@dimen/space_8"
+    app:cornerRadiusTR="@dimen/space_8">
+
+    <LinearLayout
+        android:id="@+id/ll_delivery_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/space_30"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingEnd="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        android:paddingBottom="@dimen/space_20">
+
+        <View
+            android:id="@+id/view_dash"
+            android:layout_width="@dimen/space_40"
+            android:layout_height="@dimen/space_3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_marginBottom="@dimen/space_20"
+            android:background="@drawable/xml_rounded_orange" />
+
+        <CustomViews.TextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/prefered_delivery_time"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_20" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_delivery_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</CustomViews.shadow.ShadowView>

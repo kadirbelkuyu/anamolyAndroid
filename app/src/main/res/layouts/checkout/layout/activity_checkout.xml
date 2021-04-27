@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.checkout.CheckoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_20">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/lable4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/address"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18"
+                    app:layout_constraintEnd_toStartOf="@id/iv_checkout_edit_address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_checkout_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/address"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="@dimen/text_12"
+                    app:layout_constraintEnd_toStartOf="@id/iv_checkout_edit_address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lable4" />
+
+                <ImageView
+                    android:id="@+id/iv_checkout_edit_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/address"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <LinearLayout
+                android:id="@+id/ll_checkout_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_15"
+                android:paddingBottom="@dimen/space_15">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/tv_checkout_coupon_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/do_you_have_coupon"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18" />
+
+                <LinearLayout
+                    android:id="@+id/ll_checkout_coupon_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <CustomViews.TextViewMedium
+                        android:id="@+id/tv_checkout_coupon_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/do_you_have_coupon"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorOrange" />
+
+                    <CustomViews.TextViewRegular
+                        android:id="@+id/tv_checkout_coupon_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/do_you_have_coupon"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorTextHint"
+                        android:textSize="@dimen/text_12" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/do_you_have_coupon"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <LinearLayout
+                android:id="@+id/ll_checkout_coupon_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_15"
+                android:paddingBottom="@dimen/space_15"
+                android:visibility="gone">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/tv_checkout_coupon_discount_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/discount"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/text_18" />
+
+                <ImageView
+                    android:id="@+id/iv_checkout_coupon_delete"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:contentDescription="@string/coupon"
+                    android:src="@drawable/ic_remove_circle" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <CustomViews.PriceView
+                    android:id="@+id/tv_checkout_coupon_discount_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="0.00"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_20"
+                    app:priceFontFamily="medium"
+                    app:priceSize="@dimen/text_20"
+                    app:priceSize2="@dimen/text_12" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_checkout_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_15"
+                android:paddingBottom="@dimen/space_15">
+
+                <CustomViews.TextViewMedium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/amount"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/text_18" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_checkout_total_price_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_5"
+                    android:gravity="start"
+                    android:text="0.00"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="@dimen/text_20"
+                    android:visibility="gone" />
+
+                <CustomViews.PriceView
+                    android:id="@+id/tv_checkout_total_price_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="0.00"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_20"
+                    app:priceFontFamily="medium"
+                    app:priceSize="@dimen/text_20"
+                    app:priceSize2="@dimen/text_12" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBG"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_30"
+            android:paddingTop="@dimen/space_20"
+            android:paddingEnd="@dimen/space_30"
+            android:paddingBottom="@dimen/space_20">
+
+            <CustomViews.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_5"
+                android:gravity="start"
+                android:text="@string/how_would_you_pay"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_18" />
+
+            <LinearLayout
+                android:id="@+id/ll_checkout_ideal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_10"
+                android:background="@drawable/xml_payment_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/space_10"
+                android:paddingTop="@dimen/space_5"
+                android:paddingEnd="@dimen/space_10"
+                android:paddingBottom="@dimen/space_5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/ideal"
+                    android:src="@drawable/ic_ideal" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_checkout_ideal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_15"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/ideal"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/xml_gray_white" />
+
+                <ImageView
+                    android:id="@+id/iv_checkout_ideal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/ideal"
+                    android:src="@drawable/ic_right_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_checkout_cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xml_payment_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/space_10"
+                android:paddingTop="@dimen/space_10"
+                android:paddingEnd="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/ideal"
+                    android:src="@drawable/ic_cash" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_checkout_cash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_15"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/cash_on_delivery"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/xml_gray_white" />
+
+                <ImageView
+                    android:id="@+id/iv_checkout_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/ideal"
+                    android:src="@drawable/ic_right_white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <CustomViews.ButtonMedium
+            android:id="@+id/btn_checkout_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_20"
+            android:background="@drawable/xml_view_purple"
+            android:gravity="center"
+            android:text="@string/continues"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_18"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</ScrollView>

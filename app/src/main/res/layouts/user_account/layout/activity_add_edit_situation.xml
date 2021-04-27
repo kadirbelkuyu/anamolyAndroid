@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.user_account.AddEditSituationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:orientation="vertical"
+        android:padding="@dimen/space_30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <CustomViews.TextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/home_situation"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_20" />
+
+            <CustomViews.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/number_of_people_child_s_and_pets_in_your_family"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorTextHint"
+                android:textSize="@dimen/text_12" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_add_edit_situation_adult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/adults"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintEnd_toStartOf="@id/lable11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_add_edit_situation_adult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    app:layout_constraintEnd_toStartOf="@id/lable11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_add_edit_situation_adult" />
+
+                <LinearLayout
+                    android:id="@+id/lable11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:background="@drawable/xml_rounded_border_with_bg_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_adult_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/adults"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_remove" />
+
+                    <View
+                        android:layout_width="@dimen/space_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:background="@color/colorTextHint" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_adult_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/adults"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_add" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:layout_marginBottom="@dimen/space_10"
+                android:background="@color/colorDivider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_add_edit_situation_child"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/child"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintEnd_toStartOf="@id/lable22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_add_edit_situation_child"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    app:layout_constraintEnd_toStartOf="@id/lable22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_add_edit_situation_child" />
+
+                <LinearLayout
+                    android:id="@+id/lable22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:background="@drawable/xml_rounded_border_with_bg_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_child_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/child"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_remove" />
+
+                    <View
+                        android:layout_width="@dimen/space_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:background="@color/colorTextHint" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_child_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/child"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_add" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:layout_marginBottom="@dimen/space_10"
+                android:background="@color/colorDivider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_add_edit_situation_dog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/dogs"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintEnd_toStartOf="@id/lable33"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_add_edit_situation_dog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    app:layout_constraintEnd_toStartOf="@id/lable33"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_add_edit_situation_dog" />
+
+                <LinearLayout
+                    android:id="@+id/lable33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:background="@drawable/xml_rounded_border_with_bg_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_dog_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/child"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_remove" />
+
+                    <View
+                        android:layout_width="@dimen/space_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:background="@color/colorTextHint" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_dog_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/child"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_add" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:layout_marginBottom="@dimen/space_10"
+                android:background="@color/colorDivider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10">
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_add_edit_situation_cat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/cat"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintEnd_toStartOf="@id/lable44"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_add_edit_situation_cat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    app:layout_constraintEnd_toStartOf="@id/lable44"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_add_edit_situation_cat" />
+
+                <LinearLayout
+                    android:id="@+id/lable44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:background="@drawable/xml_rounded_border_with_bg_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_cat_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/child"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_remove" />
+
+                    <View
+                        android:layout_width="@dimen/space_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:background="@color/colorTextHint" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_edit_situation_cat_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/child"
+                        android:padding="@dimen/space_5"
+                        android:src="@drawable/ic_add" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:layout_marginBottom="@dimen/space_10"
+                android:background="@color/colorDivider" />
+
+        </LinearLayout>
+
+        <CustomViews.ButtonRegular
+            android:id="@+id/btn_add_edit_situation_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:background="@drawable/xml_view_purple"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_18"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</ScrollView>

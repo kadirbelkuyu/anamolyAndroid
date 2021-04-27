@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/ll_cart_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:orientation="vertical"
+        android:padding="@dimen/space_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CustomViews.TextViewRegular
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_10"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/discount"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_18" />
+
+            <CustomViews.PriceView
+                android:id="@+id/tv_cart_total_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="0.00"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                app:priceFontFamily="medium"
+                app:priceSize="@dimen/text_16"
+                app:priceSize2="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CustomViews.TextViewRegular
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_10"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/total_amount"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_18" />
+
+            <CustomViews.PriceView
+                android:id="@+id/tv_cart_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="0.00"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                app:priceFontFamily="medium"
+                app:priceSize="@dimen/text_16"
+                app:priceSize2="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cart_delivery_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_rounded_border_with_bg_white2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_8"
+            android:weightSum="100">
+
+            <CustomViews.TextViewRegular
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35"
+                android:autoSizeMaxTextSize="@dimen/text_18"
+                android:autoSizeMinTextSize="@dimen/text_12"
+                android:autoSizeTextType="uniform"
+                android:gravity="start|center_vertical"
+                android:maxLines="2"
+                android:text="@string/delivery"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_18" />
+
+            <CustomViews.TextViewRegular
+                android:id="@+id/tv_cart_delivery_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_marginEnd="@dimen/space_10"
+                android:layout_weight="65"
+                android:autoSizeMaxTextSize="@dimen/text_18"
+                android:autoSizeMinTextSize="@dimen/text_12"
+                android:autoSizeTextType="uniform"
+                android:gravity="center|center_vertical"
+                android:maxLines="1"
+                android:text="12 Aug, 12:30-04:30"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_16" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/do_you_have_coupon"
+                android:src="@drawable/ic_arrow_right"
+                app:tint="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cart_express"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:background="@drawable/xml_rounded_border_with_bg_white2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_8"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_express"
+                tools:ignore="ContentDescription" />
+
+            <CustomViews.TextViewMedium
+                android:id="@+id/tv_cart_express_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="@dimen/text_18"
+                android:autoSizeMinTextSize="@dimen/text_12"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/attention_nthe_products_with_express_icon_are_immediately_available"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_18" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/do_you_have_coupon"
+                android:src="@drawable/ic_arrow_right"
+                app:tint="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <CustomViews.ButtonMedium
+            android:id="@+id/btn_cart_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:background="@drawable/xml_button_selector"
+            android:gravity="center"
+            android:text="@string/continues"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_18"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</LinearLayout>

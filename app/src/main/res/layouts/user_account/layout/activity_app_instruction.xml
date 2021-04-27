@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.user_account.AppInstructionActivity">
+
+    <WebView
+        android:id="@+id/wv_app_instruction"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_app_instruction"
+        android:layout_width="@dimen/space_50"
+        android:layout_height="@dimen/space_50"
+        android:layout_margin="@dimen/space_20"
+        android:elevation="@dimen/space_10"
+        android:src="@drawable/ic_arrow_right_circle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <CustomViews.ButtonMedium
+        android:id="@+id/btn_app_instruction_setting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_10"
+        android:layout_marginBottom="@dimen/space_20"
+        android:background="@drawable/xml_view_purple_border"
+        android:gravity="center"
+        android:text="@string/settings"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_18"
+        android:visibility="gone"
+        app:buttonType="second"
+        app:cornerRadius="@dimen/space_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_app_instruction_ok"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CustomViews.ButtonMedium
+        android:id="@+id/btn_app_instruction_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginEnd="@dimen/space_20"
+        android:layout_marginBottom="@dimen/space_20"
+        android:background="@drawable/xml_view_purple"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_18"
+        android:visibility="gone"
+        app:cornerRadius="@dimen/space_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_app_instruction_setting" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

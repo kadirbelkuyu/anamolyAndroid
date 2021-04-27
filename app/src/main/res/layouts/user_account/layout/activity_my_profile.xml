@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.user_account.MyProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_20">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_my_profile_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="@dimen/space_5"
+                android:layout_marginBottom="@dimen/space_8"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@id/iv_my_profile_img"
+                app:layout_constraintEnd_toEndOf="@id/iv_my_profile_img"
+                tools:ignore="ContentDescription" />
+
+
+        </FrameLayout>
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_my_profile_phone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_10"
+            android:layout_marginEnd="@dimen/space_30"
+            android:gravity="center"
+            android:text="853087514268"
+            android:textColor="@color/colorText" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_my_profile_email2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginEnd="@dimen/space_30"
+            android:layout_marginBottom="@dimen/space_20"
+            android:gravity="center"
+            android:text="test@gmail.com"
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="@dimen/space_30">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_5">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/lable1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/full_name"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_full_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_my_profile_full_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/full_name"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="@dimen/text_12"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_full_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lable1" />
+
+                <ImageView
+                    android:id="@+id/iv_my_profile_edit_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/full_name"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_5">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/lable2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/email_id"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_my_profile_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/email_id"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="@dimen/text_12"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lable2" />
+
+                <ImageView
+                    android:id="@+id/iv_my_profile_edit_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/email"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_5">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/lable3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/phone_no"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_my_profile_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/phone_no"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="@dimen/text_12"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lable3" />
+
+                <ImageView
+                    android:id="@+id/iv_my_profile_edit_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/phone_no"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_5">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/lable4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/address"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_my_profile_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/address"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="@dimen/text_12"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lable4" />
+
+                <ImageView
+                    android:id="@+id/iv_my_profile_edit_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/address"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/colorDivider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_5">
+
+                <CustomViews.TextViewMedium
+                    android:id="@+id/lable5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:gravity="start"
+                    android:text="@string/home_situation"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_18"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_situation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_my_profile_situation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_10"
+                    app:layout_constraintEnd_toStartOf="@id/iv_my_profile_edit_situation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lable5" />
+
+                <ImageView
+                    android:id="@+id/iv_my_profile_edit_situation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/home_situation"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <CustomViews.ButtonMedium
+            android:id="@+id/btn_my_profile_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_20"
+            android:background="@drawable/xml_view_purple"
+            android:gravity="center"
+            android:text="@string/change_password"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_18"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</ScrollView>

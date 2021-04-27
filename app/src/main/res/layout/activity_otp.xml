@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.otp.OtpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/space_30">
+
+        <CustomViews.TextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:gravity="center"
+            android:text="@string/verification_code"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_20" />
+
+        <CustomViews.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:gravity="center"
+            android:text="@string/please_type_the_verification_code_sent_to"
+            android:textColor="@color/colorText" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_otp_number_or_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorText" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:inputType="number"
+            android:itemBackground="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            app:itemCount="6"
+            app:lineColor="@color/colorPrimary"
+            app:viewType="line" />
+
+        <CustomViews.ButtonMedium
+            android:id="@+id/btn_otp_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_30"
+            android:background="@drawable/xml_button_selector"
+            android:gravity="center"
+            android:text="@string/verify"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_18"
+            app:cornerRadius="@dimen/space_5" />
+
+        <CustomViews.ButtonMedium
+            android:id="@+id/btn_otp_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:background="@android:color/transparent"
+            android:text="@string/re_send"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_18"
+            app:buttonType="second"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</ScrollView>

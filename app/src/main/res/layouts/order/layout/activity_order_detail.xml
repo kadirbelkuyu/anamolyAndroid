@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.order.OrderDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_order_detail_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_8"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/xml_view_purple_light"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_20"
+        android:paddingTop="@dimen/space_10"
+        android:paddingEnd="@dimen/space_20"
+        android:paddingBottom="@dimen/space_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_order_detail_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_10"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_18" />
+
+        <CustomViews.PriceView
+            android:id="@+id/tv_order_detail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/colorOrange"
+            android:textSize="@dimen/text_20"
+            app:priceFontFamily="medium"
+            app:priceSize="@dimen/text_20"
+            app:priceSize2="@dimen/text_12" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_order_detail_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/include_loader" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_order_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_order_detail_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_20"
+                app:cardBackgroundColor="@color/colorBG"
+                app:cardCornerRadius="@dimen/space_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_20">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CustomViews.TextViewRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/total_items"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextHint" />
+
+                        <CustomViews.TextViewRegular
+                            android:id="@+id/tv_order_detail_total_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorTextHint" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CustomViews.TextViewRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/subtotal"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextHint" />
+
+                        <CustomViews.PriceView
+                            android:id="@+id/tv_order_detail_total_price_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorTextHint"
+                            app:priceFontFamily="regular"
+                            app:priceSize="@dimen/text_14"
+                            app:priceSize2="@dimen/text_10" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_15"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CustomViews.TextViewRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/Discount"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorOrange" />
+
+                        <CustomViews.PriceView
+                            android:id="@+id/tv_order_detail_order_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorOrange"
+                            app:priceFontFamily="regular"
+                            app:priceSize="@dimen/text_14"
+                            app:priceSize2="@dimen/text_10" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_order_detail_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CustomViews.TextViewRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/delivery_charges"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorText" />
+
+                        <CustomViews.PriceView
+                            android:id="@+id/tv_order_detail_delivery_charge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorText"
+                            app:priceFontFamily="regular"
+                            app:priceSize="@dimen/text_14"
+                            app:priceSize2="@dimen/text_10" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_order_detail_gateway"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CustomViews.TextViewRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/gateway_charges"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorText" />
+
+                        <CustomViews.PriceView
+                            android:id="@+id/tv_order_detail_gateway_charge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorText"
+                            app:priceFontFamily="regular"
+                            app:priceSize="@dimen/text_14"
+                            app:priceSize2="@dimen/text_10" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CustomViews.TextViewBold
+                            android:id="@+id/tv_order_detail_total_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/total_paid"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorText" />
+
+                        <CustomViews.PriceView
+                            android:id="@+id/tv_order_detail_total_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorText"
+                            app:priceFontFamily="regular"
+                            app:priceSize="@dimen/text_14"
+                            app:priceSize2="@dimen/text_10" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_order_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_15"
+        android:paddingTop="@dimen/space_5"
+        android:paddingEnd="@dimen/space_15"
+        android:paddingBottom="@dimen/space_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CustomViews.TextViewMedium
+            android:id="@+id/btn_order_detail_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_view_gray"
+            android:drawableStart="@drawable/ic_track"
+            android:drawablePadding="@dimen/space_10"
+            android:gravity="center"
+            android:padding="@dimen/space_10"
+            android:text="@string/track"
+            android:textColor="@color/colorWhite" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <CustomViews.TextViewMedium
+            android:id="@+id/btn_order_detail_re_Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_view_orange"
+            android:drawableStart="@drawable/ic_reorder"
+            android:drawablePadding="@dimen/space_10"
+            android:gravity="center"
+            android:padding="@dimen/space_10"
+            android:text="@string/re_order"
+            android:textColor="@color/colorWhite"
+            app:allowBG="true"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

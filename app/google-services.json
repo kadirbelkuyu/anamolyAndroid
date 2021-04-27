@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "619543938617",
+    "project_id": "anamoly-99833",
+    "storage_bucket": "anamoly-99833.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619543938617:android:42f22da9cdd8ea743befe8",
+        "android_client_info": {
+          "package_name": "com.anamoly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619543938617-dhpmnji4f5k9qnbvaeah3elugfpg8c47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_1018qD4yhGgRcpqbvmsWjHyrvG-hGBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619543938617-dhpmnji4f5k9qnbvaeah3elugfpg8c47.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "619543938617-8a9bc69hvb9po7bq4s45hur5087jd35d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.anamoly"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

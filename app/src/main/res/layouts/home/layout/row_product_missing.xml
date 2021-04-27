@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/space_10"
+    android:paddingBottom="@dimen/space_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="@dimen/space_10">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_marginBottom="@dimen/space_10"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_place_holder"
+            android:transitionName="product_detail"
+            app:layout_constraintBottom_toTopOf="@id/tv_product_missing_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <CustomViews.TextViewMedium
+            android:id="@+id/tv_product_missing_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_10"
+            android:gravity="center"
+            android:text="@string/missing_any_product"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintBottom_toTopOf="@id/tv_product_missing_request"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_product_missing_request"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_10"
+            android:background="@drawable/xml_view_orange"
+            android:gravity="center"
+            android:padding="@dimen/space_5"
+            android:text="@string/request_new"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_14"
+            app:allowBG="true"
+            app:cornerRadius="@dimen/space_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

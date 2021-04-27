@@ -1,0 +1,172 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.anamoly"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "HEADER_KEY", keystoreProperties['HEADER_KEY']
+        buildConfigField "String", "HEADER_DEVICE", keystoreProperties['HEADER_DEVICE']
+        buildConfigField "String", "HEADER_VERSION", keystoreProperties['HEADER_VERSION']
+        buildConfigField "String", "ENCRYPTED_PASSWORD", keystoreProperties['ENCRYPTED_PASSWORD']
+        buildConfigField "String", "DIRECTION_KEY", keystoreProperties['DIRECTION_KEY']
+        buildConfigField "String", "ONESIGNAL_APP_ID", keystoreProperties['ONESIGNAL_APP_ID']
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", keystoreProperties['BASE_URL_TEST']
+            buildConfigField "String", "IMG_BASE_URL", keystoreProperties['IMG_BASE_URL_TEST']
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", keystoreProperties['BASE_URL_LIVE']
+            buildConfigField "String", "IMG_BASE_URL", keystoreProperties['IMG_BASE_URL_LIVE']
+        }
+    }
+    flavorDimensions "version"
+    productFlavors {
+        demo {
+            dimension "version"
+            versionCode 1
+            versionName "1.0-test"
+        }
+        full {
+            dimension "version"
+            versionCode 1
+            versionName "1.0"
+        }
+    }
+    splits {
+        // Configures multiple APKs based on screen density.
+        density {
+            // Configures multiple APKs based on screen density.
+            enable true
+            // Specifies a list of screen densities Gradle should not create multiple APKs for.
+            exclude "ldpi", "xxhdpi", "xxxhdpi"
+            // Specifies a list of compatible screen size settings for the manifest.
+            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+        }
+        // Configures multiple APKs based on ABI.
+        abi {
+            // Enables building multiple APKs per ABI.
+            enable true
+            // By default all ABIs are included, so use reset() and include to specify that we only
+            // want APKs for x86 and x86_64.
+            // Resets the list of ABIs that Gradle should create APKs for to none.
+            reset()
+            // Specifies a list of ABIs that Gradle should create APKs for.
+            include "x86", "x86_64"
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res',
+                           'src/main/res/layouts/home',
+                           'src/main/res/layouts/user_account',
+                           'src/main/res/layouts/register',
+                           'src/main/res/layouts/checkout',
+                           'src/main/res/layouts/cart',
+                           'src/main/res/layouts/search',
+                           'src/main/res/layouts/order',
+                           'src/main/res/layouts/product_detail',
+                           'src/main/res/layouts/notification',
+                           'src/main/res/layouts/order_tracking']
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation 'com.github.rajeshbdabhi:SecureSharedPreferences:1.0.1'
+    implementation('com.github.thekhaeng:pushdown-anim-click:1.1.1') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.job:droidnet:2.0.0'
+    // warning keep thi version beacuse if change than spring appbar not work
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
+    implementation 'com.github.simonebortolin:FlowLayoutManager:1.7'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
+    implementation 'com.onesignal:OneSignal:4.2.0'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    implementation 'com.github.dueeeke:dk-tablayout:1.0.2'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation "com.github.skydoves:balloon:1.3.3"
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:26.3.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    //retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
+    //lifecycle extensions
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
+
+    // Room components
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+
+    implementation project(':appbarspring')
+    implementation project(':ImageSlider')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_time_slot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xml_view_orange"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/space_10">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_time_slot_day_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunday"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_12" />
+
+        <CustomViews.TextViewRegular
+            android:id="@+id/tv_time_slot_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01 Jan"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_12" />
+
+    </LinearLayout>
+
+    <CustomViews.TextViewRegular
+        android:id="@+id/tv_time_slot_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginEnd="@dimen/space_20"
+        android:text="12:30 PM - 02:30 AM"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_12" />
+
+</LinearLayout>

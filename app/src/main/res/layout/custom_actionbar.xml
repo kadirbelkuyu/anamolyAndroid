@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingEnd="?actionBarSize">
+    <!-- android:paddingEnd="?actionBarSize"
+        android:paddingRight="?actionBarSize"-->
+
+    <CustomViews.TextViewMedium
+        android:id="@+id/tv_actionbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_18" />
+
+</LinearLayout>

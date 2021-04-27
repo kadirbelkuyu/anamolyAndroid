@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".view.thanks.ThanksActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/space_20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/space_20"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_cart_big" />
+
+        <CustomViews.TextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:text="@string/thanks_for_your_order"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22dp" />
+
+        <CustomViews.TextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_order_place_successfully"
+            android:textColor="@color/colorTextHint" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="@dimen/space_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_thanks_qr"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_10"
+                        android:orientation="vertical">
+
+                        <CustomViews.TextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/booking_details"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorTextHint"
+                            android:textSize="@dimen/text_18" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <CustomViews.TextViewRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:text="@string/order_id"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorText"
+                                android:textSize="@dimen/text_16" />
+
+                            <CustomViews.TextViewBold
+                                android:id="@+id/tv_thanks_order_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autoSizeMaxTextSize="@dimen/text_16"
+                                android:autoSizeMinTextSize="@dimen/text_10"
+                                android:autoSizeTextType="uniform"
+                                android:gravity="start|center"
+                                android:maxLines="1"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorText"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <CustomViews.TextViewRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:text="@string/date"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorText"
+                                android:textSize="@dimen/text_16" />
+
+                            <CustomViews.TextViewBold
+                                android:id="@+id/tv_thanks_order_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autoSizeMaxTextSize="@dimen/text_16"
+                                android:autoSizeMinTextSize="@dimen/text_10"
+                                android:autoSizeTextType="uniform"
+                                android:gravity="start|center"
+                                android:maxLines="1"
+                                android:text="202002021165465465465431321314654"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorText"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CustomViews.TextViewRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/total_items"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorTextHint" />
+
+                    <CustomViews.TextViewRegular
+                        android:id="@+id/tv_thanks_total_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/total_items"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorTextHint" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CustomViews.TextViewRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/subtotal"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorTextHint" />
+
+                    <CustomViews.PriceView
+                        android:id="@+id/tv_thanks_total_price_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/total_items"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorTextHint"
+                        app:priceFontFamily="regular"
+                        app:priceSize="@dimen/text_14"
+                        app:priceSize2="@dimen/text_10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_15"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CustomViews.TextViewRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/Discount"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorOrange" />
+
+                    <CustomViews.PriceView
+                        android:id="@+id/tv_thanks_order_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/total_items"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorOrange"
+                        app:priceFontFamily="regular"
+                        app:priceSize="@dimen/text_14"
+                        app:priceSize2="@dimen/text_10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_thanks_gateway_charge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CustomViews.TextViewRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/gateway_charges"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorText" />
+
+                    <CustomViews.PriceView
+                        android:id="@+id/tv_thanks_gateway_charge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/total_items"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorText"
+                        app:priceFontFamily="regular"
+                        app:priceSize="@dimen/text_14"
+                        app:priceSize2="@dimen/text_10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CustomViews.TextViewBold
+                        android:id="@+id/tv_thanks_total_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/total_paid"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorText" />
+
+                    <CustomViews.PriceView
+                        android:id="@+id/tv_thanks_total_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/total_items"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorText"
+                        app:priceFontFamily="regular"
+                        app:priceSize="@dimen/text_14"
+                        app:priceSize2="@dimen/text_10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <CustomViews.ButtonMedium
+            android:id="@+id/btn_thanks_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:background="@drawable/xml_view_purple"
+            android:gravity="center"
+            android:text="@string/continue1"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_18"
+            app:cornerRadius="@dimen/space_5" />
+
+    </LinearLayout>
+
+</ScrollView>

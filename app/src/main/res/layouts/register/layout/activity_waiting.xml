@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.register.WaitingActivity">
+
+    <CustomViews.TextViewMedium
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CustomViews.TextViewMedium
+        android:id="@+id/line5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="center"
+        android:text="@string/your_place_is_reserved"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1" />
+
+    <CustomViews.TextViewRegular
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_30"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="center"
+        android:paddingEnd="@dimen/space_10"
+        android:text="@string/you_are_in_queue"
+        android:textColor="@color/colorTextHint"
+        android:textSize="@dimen/text_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line5" />
+
+    <CustomViews.TextViewMedium
+        android:id="@+id/tv_waiting_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="center"
+        android:text="1032"
+        android:textColor="@color/colorOrange"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2" />
+
+    <CustomViews.TextViewRegular
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_40"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="start"
+        android:text="@string/we_will_send_you_a_message_as_soon_as_you_can_order"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorTextHint"
+        android:textSize="@dimen/text_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_waiting_number" />
+
+    <CustomViews.TextViewRegular
+        android:id="@+id/tv_waiting_contact_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_15"
+        android:drawableStart="@drawable/ic_email"
+        android:drawableTint="@color/colorBlack"
+        android:gravity="start|center_vertical"
+        android:text="@string/contact_us_if_need_help"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_goneMarginTop="@dimen/space_10" />
+
+    <CustomViews.TextViewRegular
+        android:id="@+id/line6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="start"
+        android:text="@string/you_are_in_queue_wait_until_administrator_confirm_your_registration"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorTextHint"
+        android:textSize="@dimen/text_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_waiting_contact_us" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_register_success_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/space_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CustomViews.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/when_can_i_start"
+            android:textColor="@color/colorText"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/close"
+            android:src="@drawable/ic_arrow_down" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

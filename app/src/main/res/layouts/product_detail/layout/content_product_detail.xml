@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.product_detail.ProductDetailActivity"
+    tools:showIn="@layout/activity_product_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBG"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_20">
+
+            <CustomViews.TextViewRegular
+                android:id="@+id/tv_product_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:text="Kilo Appels"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_product_detail_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="1 Kilo"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="@dimen/text_18" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_product_detail_price_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/space_5">
+
+                    <CustomViews.PriceView
+                        android:id="@+id/tv_product_detail_price_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.36"
+                        android:textColor="@color/colorTextHint"
+                        android:textSize="@dimen/text_18"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:priceFontFamily="regular"
+                        app:priceSize="@dimen/text_18"
+                        app:priceSize2="@dimen/text_10" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorTextHint"
+                        android:rotation="-30"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_product_detail_price_main"
+                        app:layout_constraintEnd_toEndOf="@id/tv_product_detail_price_main"
+                        app:layout_constraintStart_toStartOf="@id/tv_product_detail_price_main"
+                        app:layout_constraintTop_toTopOf="@id/tv_product_detail_price_main" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <CustomViews.PriceView
+                    android:id="@+id/tv_product_detail_price_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:includeFontPadding="false"
+                    android:text="1.2"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_20"
+                    app:priceFontFamily="bold"
+                    app:priceSize="@dimen/text_20"
+                    app:priceSize2="@dimen/text_12" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_product_detail_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/wv_product_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="WebViewLayout" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

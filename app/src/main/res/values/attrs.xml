@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="cornerRadius" format="dimension" />
+
+    <declare-styleable name="ShadowView">
+        <attr name="android:foreground" />
+        <attr name="shadowMargin" format="dimension" />
+        <attr name="shadowMarginTop" format="dimension" />
+        <attr name="shadowMarginLeft" format="dimension" />
+        <attr name="shadowMarginRight" format="dimension" />
+        <attr name="shadowMarginBottom" format="dimension" />
+        <attr name="cornerRadius" />
+        <attr name="cornerRadiusTL" format="dimension" />
+        <attr name="cornerRadiusTR" format="dimension" />
+        <attr name="cornerRadiusBL" format="dimension" />
+        <attr name="cornerRadiusBR" format="dimension" />
+        <attr name="foregroundColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowDx" format="float" />
+        <attr name="shadowDy" format="float" />
+        <attr name="shadowRadius" format="dimension" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowView_Layout">
+        <attr name="layout_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="fill_vertical" value="0x70" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="fill_horizontal" value="0x07" />
+            <flag name="center" value="0x11" />
+            <flag name="fill" value="0x77" />
+            <flag name="clip_vertical" value="0x80" />
+            <flag name="clip_horizontal" value="0x08" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="stl_SmartTabLayout">
+        <attr name="stl_indicatorAlwaysInCenter" format="boolean" />
+        <attr name="stl_indicatorWithoutPadding" format="boolean" />
+        <attr name="stl_indicatorInFront" format="boolean" />
+        <attr name="stl_indicatorInterpolation" format="enum">
+            <enum name="smart" value="0" />
+            <enum name="linear" value="1" />
+        </attr>
+        <attr name="stl_indicatorGravity" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+            <enum name="center" value="2" />
+        </attr>
+        <attr name="stl_indicatorColor" format="color" />
+        <attr name="stl_indicatorColors" format="reference" />
+        <attr name="stl_indicatorThickness" format="dimension" />
+        <attr name="stl_indicatorWidth" format="dimension">
+            <enum name="auto" value="-1" />
+        </attr>
+        <attr name="stl_indicatorCornerRadius" format="dimension" />
+        <attr name="stl_overlineColor" format="color" />
+        <attr name="stl_overlineThickness" format="dimension" />
+        <attr name="stl_underlineColor" format="color" />
+        <attr name="stl_underlineThickness" format="dimension" />
+        <attr name="stl_dividerColor" format="color" />
+        <attr name="stl_dividerColors" format="reference" />
+        <attr name="stl_dividerThickness" format="dimension" />
+        <attr name="stl_defaultTabBackground" format="reference" />
+        <attr name="stl_defaultTabTextAllCaps" format="boolean" />
+        <attr name="stl_defaultTabTextColor" format="color|reference" />
+        <attr name="stl_defaultTabTextSize" format="dimension" />
+        <attr name="stl_defaultTabElevation" format="dimension" />
+        <attr name="stl_defaultTabTextHorizontalPadding" format="dimension" />
+        <attr name="stl_defaultTabTextHorizontalMargin" format="dimension" />
+        <attr name="stl_defaultTabTextMinWidth" format="dimension" />
+        <attr name="stl_customTabTextLayoutId" format="reference" />
+        <attr name="stl_customTabTextViewId" format="reference" />
+        <attr name="stl_distributeEvenly" format="boolean" />
+        <attr name="stl_clickable" format="boolean" />
+        <attr name="stl_titleOffset" format="dimension">
+            <enum name="auto_center" value="-1" />
+        </attr>
+        <attr name="stl_drawDecorationAfterTab" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PriceView">
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:visibility" />
+        <attr name="priceSize" format="dimension" />
+        <attr name="priceSize2" format="dimension" />
+        <attr name="priceFontFamily" format="integer">
+            <enum name="regular" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="bold" value="3" />
+        </attr>
+        <attr name="dotMargin" format="dimension" />
+    </declare-styleable>
+
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="allowStock" format="boolean" />
+    <attr name="allowBG" format="boolean" />
+    <attr name="disableOnline" format="boolean" />
+    <attr name="buttonType" format="integer">
+        <enum name="first" value="1" />
+        <enum name="second" value="2" />
+    </attr>
+
+    <declare-styleable name="ButtonRegular">
+        <attr name="cornerRadius" />
+        <attr name="android:solidColor" />
+        <attr name="strokeWidth" />
+        <attr name="allowStock" />
+        <attr name="buttonType" />
+        <attr name="disableOnline" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonMedium">
+        <attr name="cornerRadius" />
+        <attr name="android:solidColor" />
+        <attr name="strokeWidth" />
+        <attr name="allowStock" />
+        <attr name="buttonType" />
+        <attr name="disableOnline" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonBold">
+        <attr name="cornerRadius" />
+        <attr name="android:solidColor" />
+        <attr name="strokeWidth" />
+        <attr name="allowStock" />
+        <attr name="buttonType" />
+        <attr name="disableOnline" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewRegular">
+        <attr name="cornerRadius" />
+        <attr name="allowBG" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewLight">
+        <attr name="cornerRadius" />
+        <attr name="allowBG" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewMedium">
+        <attr name="cornerRadius" />
+        <attr name="allowBG" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewBold">
+        <attr name="cornerRadius" />
+        <attr name="allowBG" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <CustomViews.EditTextRegular
+        android:id="@+id/et_search_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10"
+        android:background="@drawable/xml_rounded_border_with_bg_white2"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_search_gray"
+        android:drawablePadding="@dimen/space_10"
+        android:ems="10"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="start|center_vertical"
+        android:hint="@string/type_your_search"
+        android:inputType="textPersonName"
+        android:padding="@dimen/space_8"
+        android:textSize="@dimen/text_14" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_category_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:visibility="gone" />
+        <!--#E2FFFFFF-->
+
+        <include layout="@layout/include_loader" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_10"
+            android:layout_marginBottom="@dimen/space_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_toolbar_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_logo_text" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_1"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_home_barcode_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/space_10"
+                android:adjustViewBounds="true"
+                android:paddingTop="@dimen/space_2"
+                android:paddingBottom="@dimen/space_2"
+                android:src="@drawable/ic_barcode_scan"
+                tools:ignore="ContentDescription" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_home_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_marginEnd="@dimen/space_10"
+                android:layout_marginBottom="@dimen/space_5"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_5"
+                    android:minWidth="30dp"
+                    android:minHeight="30dp"
+                    android:src="@drawable/ic_cart_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <CustomViews.TextViewRegular
+                    android:id="@+id/tv_home_cart_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_rounded_orange"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/space_5"
+                    android:paddingEnd="@dimen/space_5"
+                    android:text="1.3"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_10"
+                    app:allowBG="true"
+                    app:cornerRadius="180dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/space_10">
+
+                <ImageView
+                    android:id="@+id/iv_home_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_5"
+                    android:minWidth="30dp"
+                    android:minHeight="30dp"
+                    android:src="@drawable/ic_notification_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <View
+                    android:id="@+id/view_home_notification_dot"
+                    android:layout_width="@dimen/space_10"
+                    android:layout_height="@dimen/space_10"
+                    android:background="@drawable/xml_circle_orange"
+                    app:layout_constraintEnd_toEndOf="@id/iv_home_notification"
+                    app:layout_constraintTop_toTopOf="@id/iv_home_notification" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <CustomViews.smarttablayout.SmartTabLayout
+        android:id="@+id/stl_home"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        app:stl_defaultTabTextAllCaps="false"
+        app:stl_defaultTabTextColor="@color/colorWhite"
+        app:stl_defaultTabTextSize="16sp"
+        app:stl_dividerColor="@android:color/transparent"
+        app:stl_dividerThickness="0dp"
+        app:stl_drawDecorationAfterTab="false"
+        app:stl_indicatorColor="@color/colorOrange"
+        app:stl_indicatorCornerRadius="25dp"
+        app:stl_indicatorGravity="center"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="linear"
+        app:stl_indicatorThickness="25dp"
+        app:stl_indicatorWidth="auto"
+        app:stl_indicatorWithoutPadding="false" />
+
+    <!--<com.dueeeke.tablayout.SlidingTabLayout
+        android:id="@+id/stl_home_2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        app:tl_divider_color="@android:color/transparent"
+        app:tl_divider_width="0dp"
+        app:tl_indicator_color="@color/colorOrange"
+        app:tl_indicator_corner_radius="25dp"
+        app:tl_indicator_margin_bottom="10dp"
+        app:tl_indicator_margin_top="10dp"
+        app:tl_indicator_style="BLOCK"
+        app:tl_textAllCaps="false"
+        app:tl_textBold="BOTH"
+        app:tl_textSelectSize="@dimen/text_12"
+        app:tl_textSize="@dimen/text_12"
+        app:tl_textUnselectedColor="@color/colorWhite" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/include_loader" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <CustomViews.TextViewMedium
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_20"
+            android:text="0"
+            app:layout_constraintEnd_toStartOf="@id/tv_price_dot"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CustomViews.TextViewMedium
+            android:id="@+id/tv_price_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_14"
+            android:translationX="-4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

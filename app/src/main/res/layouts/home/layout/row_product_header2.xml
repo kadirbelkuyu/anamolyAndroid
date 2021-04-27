@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_product_header"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/colorBG"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/space_10"
+    android:paddingTop="@dimen/space_10"
+    android:paddingEnd="@dimen/space_10"
+    android:paddingBottom="@dimen/space_10"
+    android:visibility="gone">
+
+    <CustomViews.TextViewBold
+        android:id="@+id/tv_product_header_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text="Jouw favorieten"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_18" />
+
+    <LinearLayout
+        android:id="@+id/ll_product_header_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CustomViews.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/more"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_14" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="@dimen/space_5"
+            android:contentDescription="@string/more"
+            android:src="@drawable/ic_arrow_right_circle" />
+
+    </LinearLayout>
+
+</LinearLayout>

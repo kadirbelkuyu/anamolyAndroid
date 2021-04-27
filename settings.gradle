@@ -1,0 +1,2 @@
+include ':app', ':appbarspring', ':ImageSlider'
+rootProject.name = 'Anamoly'
